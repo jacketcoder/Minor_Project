@@ -1,0 +1,27 @@
+1.application developers
+
+windows,linux,mac,server,web,front,back
+ooad,uml,shell,script,java,c#,php,ruby,r,android,ios,python,c++,c,perl
+net,html5,html,xml,xaml,css,jquery,javascript,json
+visual,studio,nodeJs,django,bootstrap,ajax,azure,api,git,eclipse,vmware
+database,mysql,sql,oracle,PostGre,mongoDB
+developer,engineering
+
+2.Database engineer
+database,mysql,sql,oracle,PostGre,workbench,mongoDB,access,db,vb,
+inventory,payroll,data,backup,client,cluster,db,vb
+ooad,uml,shell,script,java,c#,php,ruby,r,android,ios,python,c++,c,perl
+net,html5,html,xml,xaml,css,jquery,javascript
+
+3.graphic designer
+design,
+graphic,adobe,photoshop,ps, InDesign,illustrator,paint,blender,maya,Photography,logo
+layout,flash,Dreamweaver,QuarkXpress,Premiere
+net,html5,html,xml,xaml,css,jquery,javascript
+
+
+4.marketing manager
+position,marketing,company,manager,development,team,resources,time,analytics
+module,integrations,maintenance,expert,configuration,tool,batch,processing,automation
+improvement,techniques,modeling,recovery,memory,optimization,drive
+shell,script,java,c#,php,ruby,r,android,ios,python,c++,c,perl
