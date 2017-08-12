@@ -34,12 +34,12 @@ class GUI:
         self.topCVDisplay.pack(fill=X,padx=50)
         self.box_value = StringVar()
         self.box = ttk.Combobox(self.topCVDisplay, textvariable=self.box_value,state='readonly')
-        self.box['values'] = ('game developer', 'animator', 'network engineer','web developer','DataScientist','Software developer')
+        self.box['values'] = ( 'animator','webDeveloper','SoftwareDeveloper','')
         self.box.grid(column=0, row=0)
-        
         #process button
         self.processButton = Button(self.jobReqFrame, text ="    Process    ",command=self.processExe)
         self.processButton.pack(side=LEFT,padx=10,pady=10)
+        self.analyze=None
         self.exitButton = Button(self.root, text ="    Exit    ",command=self.root.destroy)
         self.exitButton.pack(side=LEFT,padx=10,pady=10)
         self.manager=CVManager()
@@ -52,7 +52,7 @@ class GUI:
         if(not(self.run)):
             self.passingInfo.directoryPath=self.directoryEntry.get()
             self.passingInfo.jobSelected=self.box.get()
-            #self.passingInfo.relevantWords=self.relevantWordsText.get('1.0',END).strip().split(" ")
+    #        self.passingInfo.relevantWords=self.relevantWordsText.get('1.0',END).strip().split(" ")
     #         if self.passingInfo.relevantWords:
     #             if self.passingInfo.jobSelected:
     #                 if self.passingInfo.directoryPath:
@@ -67,19 +67,31 @@ class GUI:
                     self.manager.clusterData()
                     self.manager.rankCV()
                     self.manager.showAnalytics()
-                    CVDataList=self.manager.showTopCVPerPost(self.passingInfo.jobSelected)
-                    self.createLinkToCV(CVDataList)
+                    self.manager.orderedCVList=self.manager.showTopCVPerPost(self.passingInfo.jobSelected)
+                    #self.manager.compareCV()
+                    self.analyze = Button(self.root, text ="analyze",command=self.analyzeCV)
+                    self.analyze.pack(side=LEFT,padx=10,pady=10)
+                    self.createLinkToCV(self.manager.orderedCVList)
+                    
                 except Exception as e:
                     print("error")
                     print("processing \t"+str(e))
             else:
                 print("select all necessary info")
         else:
-            self.passingInfo.jobSelected=self.box.get()
-            CVDataList=self.manager.showTopCVPerPost(self.passingInfo.jobSelected)
-            self.buttonList.destoringButtons()
-            self.createLinkToCV(CVDataList)
+            try:
+                self.passingInfo.jobSelected=self.box.get()
+                self.manager.orderedCVList=self.manager.showTopCVPerPost(self.passingInfo.jobSelected)
+                self.buttonList.destoringButtons()
+                self.createLinkToCV(self.manager.orderedCVList)
+                #self.manager.compareCV()
+            except Exception as e:
+                    print("error")
+                    print("processing second time \t"+str(e))
     def createLinkToCV(self,dataList):
         self.buttonList=buttonHandler(self.root,dataList)
+    def analyzeCV(self):
+        self.manager.compareCV()
+        
 
    

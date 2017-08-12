@@ -1,18 +1,18 @@
 class communicationInformation:
     def __init__(self):
         self.directoryPath=""
-        #self.relevantWords=[]
+        self.relevantWords=[]
         self.jobSelected=""
         self.workFlow=True
         relevantWords1=[
-'ip',
-   'firewall',
-'layer',
-     'wan',
-   'protocol',
-     'router',
-     'switch',
-     'traffic',
+# 'ip',
+#    'firewall',
+# 'layer',
+#      'wan',
+#    'protocol',
+#      'router',
+#      'switch',
+#      'traffic',
       'css',
    'design',
   'html',
@@ -21,7 +21,7 @@ class communicationInformation:
  'mysql',
   'ajax',
      'php',
-   'unity','game','team','computer','engine','software','programming','developer','microsoft','project',
+#    'unity','game','team','computer','engine','software','programming','developer','microsoft','project',
     'animation','adobe','flash','character','art','illustrator','design','animator','effects','maya','photoshop',
     
    "software","skills","application","developer","server",

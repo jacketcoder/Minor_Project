@@ -10,6 +10,7 @@ class CV:
             self.textHandeller.normalizeText()
             self.featureVector=[]
             self.score=None
+            self.frequencyVector=[]
 
 
 
