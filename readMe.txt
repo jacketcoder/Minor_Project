@@ -27,3 +27,5 @@ Instruction To Run the program
 11.3.Last 2 CVs graph of relevant word vs its frequency is shown.
 12.For other job just change the job from Selected Post and click the Process button.Other are same steps.
 12.Overall,these are the features of our software.
+
+*Note:If you give the cv of particular job then that specific job should be selected from Select Post to run the program sucessfully.
